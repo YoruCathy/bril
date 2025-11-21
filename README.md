@@ -1,3 +1,4 @@
+# See https://github.com/YoruCathy/bril/blob/main/README_briltace.md for readme
 Bril: A Compiler Intermediate Representation for Learning
 =========================================================
 
