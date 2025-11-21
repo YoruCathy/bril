@@ -9,7 +9,7 @@ interface TraceInfo {
 
 let globalTrace: TraceInfo | null = null;
 
-// simple temp name counter for guards when we negate conditions
+// Temporary variable names for trace-generated instructions
 let traceTmpCounter = 0;
 function freshTraceTmp(): string {
   return `_t_trace_${traceTmpCounter++}`;
@@ -845,7 +845,7 @@ function evalInstr(instr: bril.Instruction, state: State): Action {
 }
 
 function evalFunc(func: bril.Function, state: State): Value | null {
-  // --- tracing locals for this function call ---
+  // Tracing state for this function call
   const isTracingFunc = (func.name === "main");  
   let tracing = false;
   const traceInstrs: any[] = [];   
@@ -936,7 +936,7 @@ function evalFunc(func: bril.Function, state: State): Value | null {
     throw error(`implicit return in speculative state`);
   }
 
-  // also finalize trace here if main falls off the end (rare)
+  // Save trace if main reaches the end without an explicit return.
   if (isTracingFunc && tracing && traceInstrs.length > 0) {
     globalTrace = {
       func: func.name,
@@ -953,7 +953,7 @@ function recordTraceInstr(
   traceInstrs: any[],          // accumulator
   bailLabel: string,           
 ) {
-  // Ignore labels; we only care about ops
+  // Only record operations (skip labels)
   if (!("op" in line)) {
     return;
   }
@@ -1115,7 +1115,6 @@ function evalProg(prog: bril.Program) {
   };
   evalFunc(main, state);
 
-    // If requested, dump the recorded trace as JSON.
   if (dumpTrace && globalTrace) {
     console.log(JSON.stringify(globalTrace, null, 2));
   }
