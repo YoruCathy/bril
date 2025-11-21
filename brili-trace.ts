@@ -846,15 +846,15 @@ function evalInstr(instr: bril.Instruction, state: State): Action {
 
 function evalFunc(func: bril.Function, state: State): Value | null {
   // --- tracing locals for this function call ---
-  const isTracingFunc = (func.name === "main");  // only trace main for now
+  const isTracingFunc = (func.name === "main");  
   let tracing = false;
-  const traceInstrs: any[] = [];   // or brill.Instruction[]
-  const BAIL_LABEL = "__TRACE_BAIL"; // placeholder; changed later in injector
+  const traceInstrs: any[] = [];   
+  const BAIL_LABEL = "__TRACE_BAIL"; 
 
   for (let i = 0; i < func.instrs.length; ++i) {
     const line = func.instrs[i];
 
-    // Decide when to start tracing: first real instruction in main
+
     if (isTracingFunc && !tracing && i === 0) {
       tracing = true;
     }
@@ -863,7 +863,6 @@ function evalFunc(func: bril.Function, state: State): Value | null {
       // Run an instruction.
       const action = evalInstr(line, state);
 
-      // --- tracing: record this executed instruction, if tracing is on ---
       if (tracing) {
         recordTraceInstr(line, state, traceInstrs, BAIL_LABEL);
       }
@@ -900,8 +899,6 @@ function evalFunc(func: bril.Function, state: State): Value | null {
           if (!state.specparent) {
             throw error(`abort in non-speculative state`);
           }
-          // We do *not* restore `icount` from the saved state to ensure that we
-          // count "aborted" instructions.
           Object.assign(state, {
             env: state.specparent.env,
             ssaEnv: state.specparent.ssaEnv,
@@ -923,7 +920,7 @@ function evalFunc(func: bril.Function, state: State): Value | null {
         for (i = 0; i < func.instrs.length; ++i) {
           const sLine = func.instrs[i];
           if ("label" in sLine && sLine.label === action.label) {
-            --i; // Execute the label next.
+            --i; // Execute the label next
             break;
           }
         }
@@ -954,30 +951,22 @@ function recordTraceInstr(
   line: bril.Instruction,      // current executed instruction
   state: State,                // to read variable values
   traceInstrs: any[],          // accumulator
-  bailLabel: string,           // e.g., "__TRACE_BAIL"
+  bailLabel: string,           
 ) {
   // Ignore labels; we only care about ops
   if (!("op" in line)) {
     return;
   }
 
-  // Don’t try to trace calls / memory / etc. yet: bail out early
   const unsupportedOps = new Set([
     "call", "ret", "alloc", "load", "store",
-    // add others you don’t want to handle inside a trace
   ]);
   if (unsupportedOps.has(line.op)) {
-    // simplest policy: just stop adding new instrs; trace remains prefix
-    // (you can also add a flag to stop tracing entirely)
     return;
   }
-
-  // Drop jmp: we linearize the actual path
   if (line.op === "jmp") {
     return;
   }
-
-  // Transform br -> guard based on *actual* condition value
   if (line.op === "br") {
     const condVar = line.args[0];
     const condVal = state.env.get(condVar);
@@ -1128,9 +1117,6 @@ function evalProg(prog: bril.Program) {
 
     // If requested, dump the recorded trace as JSON.
   if (dumpTrace && globalTrace) {
-    // For the assignment you usually want *just* the JSON,
-    // so you may avoid using `print` in your traced run or
-    // use a separate invocation of brili for correctness.
     console.log(JSON.stringify(globalTrace, null, 2));
   }
 
