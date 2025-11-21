@@ -1,0 +1,1308 @@
+{
+  "functions": [
+    {
+      "args": [
+        {
+          "name": "x",
+          "type": "int"
+        },
+        {
+          "name": "y",
+          "type": "int"
+        }
+      ],
+      "instrs": [
+        {
+          "label": ".main_entry"
+        },
+        {
+          "op": "speculate"
+        },
+        {
+          "args": [
+            "y"
+          ],
+          "dest": "greater",
+          "op": "id",
+          "type": "int"
+        },
+        {
+          "args": [
+            "x",
+            "y"
+          ],
+          "dest": "v4",
+          "op": "gt",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "v4"
+          ],
+          "dest": "_t_trace_0",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_0"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_1",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_1"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_2",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_2"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_3",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_3"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_4",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_4"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_5",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_5"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_6",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_6"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_7",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_7"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_8",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_8"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_9",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_9"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_10",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_10"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_11",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_11"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_12",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_12"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_13",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_13"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_14",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_14"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "bothZero"
+          ],
+          "dest": "_t_trace_15",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_15"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "bothZero"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "greater"
+          ],
+          "op": "print"
+        },
+        {
+          "op": "commit"
+        },
+        {
+          "op": "jmp",
+          "labels": [
+            ".main_entry_after"
+          ]
+        },
+        {
+          "label": ".main_entry_slow"
+        },
+        {
+          "args": [
+            "y"
+          ],
+          "dest": "greater",
+          "op": "id",
+          "type": "int"
+        },
+        {
+          "args": [
+            "x",
+            "y"
+          ],
+          "dest": "v4",
+          "op": "gt",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "v4"
+          ],
+          "labels": [
+            "then.1",
+            "else.1"
+          ],
+          "op": "br"
+        },
+        {
+          "label": "then.1"
+        },
+        {
+          "args": [
+            "x"
+          ],
+          "dest": "greater",
+          "op": "id",
+          "type": "int"
+        },
+        {
+          "labels": [
+            "endif.1"
+          ],
+          "op": "jmp"
+        },
+        {
+          "label": "else.1"
+        },
+        {
+          "label": "endif.1"
+        },
+        {
+          "label": "foreverloop"
+        },
+        {
+          "args": [
+            "greater",
+            "x"
+          ],
+          "dest": "modX",
+          "funcs": [
+            "getMod"
+          ],
+          "op": "call",
+          "type": "int"
+        },
+        {
+          "args": [
+            "greater",
+            "y"
+          ],
+          "dest": "modY",
+          "funcs": [
+            "getMod"
+          ],
+          "op": "call",
+          "type": "int"
+        },
+        {
+          "dest": "zero",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "args": [
+            "modX",
+            "zero"
+          ],
+          "dest": "xZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "modY",
+            "zero"
+          ],
+          "dest": "yZero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "xZero",
+            "yZero"
+          ],
+          "dest": "bothZero",
+          "op": "and",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "bothZero"
+          ],
+          "labels": [
+            "then.2",
+            "else.2"
+          ],
+          "op": "br"
+        },
+        {
+          "label": "then.2"
+        },
+        {
+          "args": [
+            "greater"
+          ],
+          "op": "print"
+        },
+        {
+          "labels": [
+            "loopend"
+          ],
+          "op": "jmp"
+        },
+        {
+          "label": "else.2"
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "args": [
+            "greater",
+            "one"
+          ],
+          "dest": "greater",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "labels": [
+            "foreverloop"
+          ],
+          "op": "jmp"
+        },
+        {
+          "label": "loopend"
+        },
+        {
+          "label": ".main_entry_after"
+        }
+      ],
+      "name": "main"
+    },
+    {
+      "args": [
+        {
+          "name": "val",
+          "type": "int"
+        },
+        {
+          "name": "mod",
+          "type": "int"
+        }
+      ],
+      "instrs": [
+        {
+          "args": [
+            "val",
+            "mod"
+          ],
+          "dest": "divisor",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "divisor",
+            "mod"
+          ],
+          "dest": "multiple",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "val",
+            "multiple"
+          ],
+          "dest": "rem",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "rem"
+          ],
+          "op": "ret"
+        }
+      ],
+      "name": "getMod",
+      "type": "int"
+    }
+  ]
+}

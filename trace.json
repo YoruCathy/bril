@@ -1,0 +1,1035 @@
+17
+52
+26
+13
+40
+20
+10
+5
+16
+8
+4
+2
+1
+{
+  "func": "main",
+  "trace": [
+    {
+      "dest": "one",
+      "op": "const",
+      "type": "int",
+      "value": 1
+    },
+    {
+      "dest": "two",
+      "op": "const",
+      "type": "int",
+      "value": 2
+    },
+    {
+      "dest": "three",
+      "op": "const",
+      "type": "int",
+      "value": 3
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_0",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_0"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "even"
+      ],
+      "dest": "_t_trace_1",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_1"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "three"
+      ],
+      "dest": "x",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "x",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_2",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_2"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_3",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_3"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_4",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_4"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "even"
+      ],
+      "dest": "_t_trace_5",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_5"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "three"
+      ],
+      "dest": "x",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "x",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_6",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_6"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_7",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_7"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_8",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_8"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_9",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_9"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "even"
+      ],
+      "dest": "_t_trace_10",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_10"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "three"
+      ],
+      "dest": "x",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "x",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_11",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_11"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_12",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_12"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_13",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_13"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "eq_one"
+      ],
+      "dest": "_t_trace_14",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_14"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "half",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "half",
+        "two"
+      ],
+      "dest": "doublehalf",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x",
+        "doublehalf"
+      ],
+      "dest": "even",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "even"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "x",
+        "two"
+      ],
+      "dest": "x",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "x"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "x",
+        "one"
+      ],
+      "dest": "eq_one",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "eq_one"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    }
+  ]
+}

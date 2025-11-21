@@ -1,0 +1,766 @@
+{
+  "functions": [
+    {
+      "args": [
+        {
+          "name": "num",
+          "type": "int"
+        }
+      ],
+      "instrs": [
+        {
+          "label": ".main_entry"
+        },
+        {
+          "op": "speculate"
+        },
+        {
+          "dest": "zer",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "dest": "fac",
+          "op": "const",
+          "type": "int",
+          "value": 2
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "iszero"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac"
+          ],
+          "op": "print"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "num",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "iszero"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac"
+          ],
+          "op": "print"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "num",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "iszero"
+          ],
+          "dest": "_t_trace_0",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_0"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac",
+            "one"
+          ],
+          "dest": "fac",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "iszero"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac"
+          ],
+          "op": "print"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "num",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "iszero"
+          ],
+          "dest": "_t_trace_1",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_1"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac",
+            "one"
+          ],
+          "dest": "fac",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "iszero"
+          ],
+          "dest": "_t_trace_2",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_2"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac",
+            "one"
+          ],
+          "dest": "fac",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "iszero"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "args": [
+            "fac"
+          ],
+          "op": "print"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "num",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "op": "not",
+          "args": [
+            "ispos"
+          ],
+          "dest": "_t_trace_3",
+          "type": "bool"
+        },
+        {
+          "op": "guard",
+          "args": [
+            "_t_trace_3"
+          ],
+          "labels": [
+            ".main_entry_slow"
+          ]
+        },
+        {
+          "op": "commit"
+        },
+        {
+          "op": "jmp",
+          "labels": [
+            ".main_entry_after"
+          ]
+        },
+        {
+          "label": ".main_entry_slow"
+        },
+        {
+          "dest": "zer",
+          "op": "const",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "dest": "one",
+          "op": "const",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "dest": "fac",
+          "op": "const",
+          "type": "int",
+          "value": 2
+        },
+        {
+          "label": "loopcheck"
+        },
+        {
+          "args": [
+            "one",
+            "num"
+          ],
+          "dest": "ispos",
+          "op": "lt",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "ispos"
+          ],
+          "labels": [
+            "loopbody",
+            "loopend"
+          ],
+          "op": "br"
+        },
+        {
+          "label": "loopbody"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "quo",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "args": [
+            "quo",
+            "fac"
+          ],
+          "dest": "tmp",
+          "op": "mul",
+          "type": "int"
+        },
+        {
+          "args": [
+            "num",
+            "tmp"
+          ],
+          "dest": "mod",
+          "op": "sub",
+          "type": "int"
+        },
+        {
+          "args": [
+            "mod",
+            "zer"
+          ],
+          "dest": "iszero",
+          "op": "eq",
+          "type": "bool"
+        },
+        {
+          "args": [
+            "iszero"
+          ],
+          "labels": [
+            "ifyes",
+            "ifno"
+          ],
+          "op": "br"
+        },
+        {
+          "label": "ifyes"
+        },
+        {
+          "args": [
+            "fac"
+          ],
+          "op": "print"
+        },
+        {
+          "args": [
+            "num",
+            "fac"
+          ],
+          "dest": "num",
+          "op": "div",
+          "type": "int"
+        },
+        {
+          "labels": [
+            "loopcheck"
+          ],
+          "op": "jmp"
+        },
+        {
+          "label": "ifno"
+        },
+        {
+          "args": [
+            "fac",
+            "one"
+          ],
+          "dest": "fac",
+          "op": "add",
+          "type": "int"
+        },
+        {
+          "labels": [
+            "loopcheck"
+          ],
+          "op": "jmp"
+        },
+        {
+          "label": "loopend"
+        },
+        {
+          "label": ".main_entry_after"
+        }
+      ],
+      "name": "main"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+Trace-based Speculation Evaluation
+==================================
+
+----------------------------------------
+Benchmark: factors
+  Training input A = 60
+  Test input     B = 97
+
+Correctness on A (60):
+  PASS
+Correctness on B (97):
+  PASS
+
+Dynamic Instruction Count:
+  Input A (60): original=72, spec=72
+  Input B (97): original=870, spec=881
+
+----------------------------------------
+Benchmark: perfect
+  Training input A = 28
+  Test input     B = 12
+
+Correctness on A (28):
+  PASS
+Correctness on B (12):
+  PASS
+
+Dynamic Instruction Count:
+  Input A (28): original=58, spec=63
+  Input B (12): original=37, spec=67
+
+----------------------------------------
+Benchmark: sum-of-cubes
+  Training input A = 10
+  Test input     B = 20
+
+Correctness on A (10):
+  PASS
+Correctness on B (20):
+  PASS
+
+Dynamic Instruction Count:
+  Input A (10): original=8, spec=11
+  Input B (20): original=8, spec=11
+
+==================================
+Done. Results written to results.txt

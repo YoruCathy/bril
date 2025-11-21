@@ -1,0 +1,605 @@
+2
+2
+3
+5
+{
+  "func": "main",
+  "trace": [
+    {
+      "dest": "zer",
+      "op": "const",
+      "type": "int",
+      "value": 0
+    },
+    {
+      "dest": "one",
+      "op": "const",
+      "type": "int",
+      "value": 1
+    },
+    {
+      "dest": "fac",
+      "op": "const",
+      "type": "int",
+      "value": 2
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "iszero"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "num",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "iszero"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "num",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "iszero"
+      ],
+      "dest": "_t_trace_0",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_0"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac",
+        "one"
+      ],
+      "dest": "fac",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "iszero"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "num",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "iszero"
+      ],
+      "dest": "_t_trace_1",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_1"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac",
+        "one"
+      ],
+      "dest": "fac",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "iszero"
+      ],
+      "dest": "_t_trace_2",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_2"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac",
+        "one"
+      ],
+      "dest": "fac",
+      "op": "add",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "ispos"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "quo",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "quo",
+        "fac"
+      ],
+      "dest": "tmp",
+      "op": "mul",
+      "type": "int"
+    },
+    {
+      "args": [
+        "num",
+        "tmp"
+      ],
+      "dest": "mod",
+      "op": "sub",
+      "type": "int"
+    },
+    {
+      "args": [
+        "mod",
+        "zer"
+      ],
+      "dest": "iszero",
+      "op": "eq",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "iszero"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    },
+    {
+      "args": [
+        "fac"
+      ],
+      "op": "print"
+    },
+    {
+      "args": [
+        "num",
+        "fac"
+      ],
+      "dest": "num",
+      "op": "div",
+      "type": "int"
+    },
+    {
+      "args": [
+        "one",
+        "num"
+      ],
+      "dest": "ispos",
+      "op": "lt",
+      "type": "bool"
+    },
+    {
+      "op": "not",
+      "args": [
+        "ispos"
+      ],
+      "dest": "_t_trace_3",
+      "type": "bool"
+    },
+    {
+      "op": "guard",
+      "args": [
+        "_t_trace_3"
+      ],
+      "labels": [
+        "__TRACE_BAIL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Example for perfect if you try it:
+
+bril2json < benchmarks/core/perfect.bril > perfect.json
+
+deno run --allow-read brili-trace.ts -t 5 < perfect.json > perfect_trace.json
+
+python3 trace_inject.py perfect_trace.json < perfect.json > perfect_spec.json
+
+deno run --allow-read brili.ts 5 < perfect.json        > perfect_orig_A.txt
+deno run --allow-read brili.ts 7 < perfect.json        > perfect_orig_B.txt
+deno run --allow-read brili.ts 5 < perfect_spec.json   > perfect_spec_A.txt
+deno run --allow-read brili.ts 7 < perfect_spec.json   > perfect_spec_B.txt
+
+diff perfect_orig_A.txt perfect_spec_A.txt
+diff perfect_orig_B.txt perfect_spec_B.txt
